@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
+using System.Xml;
 
 namespace RSSReader
 {
@@ -44,37 +47,93 @@ namespace RSSReader
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will open Folder Dialog");
+            FolderDialog folderDialog = new FolderDialog();
+
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("User selected OK");
+            }
+            else
+            {
+                MessageBox.Show("User Selected Cancel");
+            }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will open Folder Dialog");
+            FolderDialog folderDialog = new FolderDialog();
+
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("User selected OK");
+            }
+            else
+            {
+                MessageBox.Show("User Selected Cancel");
+            }
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will open Folder Dialog");
+            FolderDialog folderDialog = new FolderDialog();
+
+            if (folderDialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("User selected OK");
+            }
+            else
+            {
+                MessageBox.Show("User Selected Cancel");
+            }
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will open Channel Dialog");
+            ChannelDialog channelDialog = new ChannelDialog();
+
+            if (channelDialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("User selected OK");
+            }
+            else
+            {
+                MessageBox.Show("User Selected Cancel");
+            }
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will open Channel Dialog");
+            ChannelDialog channelDialog = new ChannelDialog();
+
+            if (channelDialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("User selected OK");
+            }
+            else
+            {
+                MessageBox.Show("User Selected Cancel");
+            }
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will open Channel Dialog");
+            ChannelDialog channelDialog = new ChannelDialog();
+
+            if (channelDialog.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("User selected OK");
+            }
+            else
+            {
+                MessageBox.Show("User Selected Cancel");
+            }
         }
 
         private void toolStripButton7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Will Refresh RSS feed");
+            string rssURL = "http://www.rte.ie/news/rss/news-headlines.xml";
+
+            RssManager.RefreshRSS(rssURL);
         }
     }
 }
